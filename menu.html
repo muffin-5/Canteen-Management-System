@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Canteen Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Our Menu</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <section class="menu">
+          <h2>Available Items</h2>
+          <button id="edit-menu-btn" class="btn-secondary">Edit Menu</button>
+          <div class="table-responsive">
+            <table class="menu-table" id="menu-table">
+              <thead>
+                <tr>
+                  <th>Item ID</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Cheeseburger</td>
+                  <td>Main Course</td>
+                  <td>$5.99</td>
+                  <td>Juicy cheeseburger with lettuce and tomato</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Caesar Salad</td>
+                  <td>Salad</td>
+                  <td>$4.99</td>
+                  <td>Crisp romaine lettuce with Caesar dressing</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Spaghetti Carbonara</td>
+                  <td>Main Course</td>
+                  <td>$7.99</td>
+                  <td>Pasta with creamy carbonara sauce and bacon</td>
+                  <td>Unavailable</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Margherita Pizza</td>
+                  <td>Main Course</td>
+                  <td>$8.99</td>
+                  <td>Classic pizza with fresh basil and mozzarella</td>
+                  <td>Available</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Chocolate Cake</td>
+                  <td>Dessert</td>
+                  <td>$3.99</td>
+                  <td>Rich and moist chocolate cake</td>
+                  <td>Available</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Edit Menu Modal -->
+    <div id="edit-menu-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Edit Menu</h2>
+        <form id="edit-menu-form">
+          <div class="form-group">
+            <label for="item-id">Item ID:</label>
+            <input type="number" id="item-id" name="item-id" required />
+          </div>
+          <div class="form-group">
+            <label for="item-name">Item Name:</label>
+            <input type="text" id="item-name" name="item-name" required />
+          </div>
+          <div class="form-group">
+            <label for="item-category">Category:</label>
+            <input
+              type="text"
+              id="item-category"
+              name="item-category"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="item-price">Price:</label>
+            <input type="number" id="item-price" name="item-price" required />
+          </div>
+          <div class="form-group">
+            <label for="item-description">Description:</label>
+            <textarea
+              id="item-description"
+              name="item-description"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="item-availability">Availability:</label>
+            <input
+              type="text"
+              id="item-availability"
+              name="item-availability"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Save Changes</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
